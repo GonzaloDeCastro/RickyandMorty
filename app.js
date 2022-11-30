@@ -77,6 +77,7 @@ const characterId = (id) => {
     }
   });
 };
+
 const loadCharacters = async () => {
   try {
     const resp = await fetch(`https://rickandmortyapi.com/api/character`);
