@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("/background.jpg");
+  color: #1d1d1d;
+}
+
+.generalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container .character {
+  width: 254px;
+  height: 368px;
+  text-align: left;
+  padding: 10px;
+}
+
+.container .character .poster {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 15px;
+}
+
+.pagination button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50px;
+  width: 200px;
+  background: #511829;
+  color: #fff;
+  border-radius: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: 0.3s ease all;
+}
+
+.containerCardId {
+  background-color: #fafafa;
+  border: solid 2px;
+  border-color: rgb(90, 248, 235);
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.containerCard {
+  background-color: #fafafa;
+  border: solid 2px;
+  border-color: rgb(90, 248, 235);
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.containerCard:hover {
+  border: solid 5px;
+  border-color: rgb(255, 251, 146);
+}
+
+.buttonCard {
+  background-color: rgb(90, 248, 235);
+  padding: 5px;
+  border-radius: 7px;
+  color: #450909;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+.buttonCard:hover {
+  color: rgb(169, 50, 50);
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: flex-end;
+  margin: 15px auto 10px auto;
+  width: 60%;
+  font-weight: bolder;
+  color: rgb(90, 248, 235);
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="password"] {
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 0;
+  height: 35px;
+  color: grey;
+  padding-left: 5px;
+}
+
+textarea {
+  height: 150px;
+  font-size: 1.2em;
+}
+
+.charForm {
+  display: flex;
+}
+
+.description {
+  background-color: #fff;
+  margin: 10px 0px 10px 0px;
+  padding: 15px;
+  border-radius: 10px;
+  width: 75%;
+  background: -webkit-linear-gradient(90deg, yellow 10%, orange 90%);
+  background: -moz-linear-gradient(90deg, yellow 10%, orange 90%);
+}
