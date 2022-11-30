@@ -21,13 +21,13 @@ const characterId = (id) => {
           </div>
           <section>
           <div id="afrus-container-form" data-form="63eb5735-0d30-4503-8f5e-63f7c16b036e">
-          <form id="formulario">
-              <label for="nombre">Nombre:</label>
-              <input id="nombre" type="text" placeholder="Nombre completo">
+          <form id="form">
+              <label for="name">Nombre:</label>
+              <input id="name" type="text" placeholder="nombre completo">
               <label for="email">Email:</label>
               <input  id="email"  type="email" placeholder="ejemplo@email.com">
-              <label for="mensaje">Mensaje:</label>
-              <textarea id="mensaje" placeholder="Dejanos tu mensaje"></textarea>
+              <label for="message">Mensaje:</label>
+              <textarea id="message" placeholder="Dejanos tu mensaje"></textarea>
               </br>
               <input id="submit"  class="buttonCard" type="submit" value="Enviar">
           </form>
@@ -52,25 +52,26 @@ const characterId = (id) => {
 
   loadOneCharacter();
 
-  let formulario = document.getElementById("formulario");
-  let nombre = document.getElementById("nombre");
+  let form = document.getElementById("form");
+  let name = document.getElementById("name");
   let email = document.getElementById("email");
-  let comentario = document.getElementById("mensaje");
+  let message = document.getElementById("message");
+console.log('entra??')
+  form.addEventListener("submit", (e) => {
 
-  formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     let validateEmail =
       /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (nombre.value.length < 6) {
-      alert("El campo está vacío o el nombre es demasiado corto");
+    if (name.value.length < 6) {
+      alert("El campo está vacío o el name es demasiado corto");
     } else {
       if (!validateEmail.test(email.value)) {
         alert("email inválido");
       } else {
-        if (comentario.value.length < 6) {
-          alert("El campo está vacío o el comentario es demasiado breve");
+        if (message.value.length < 6) {
+          alert("El campo está vacío o el message es demasiado breve");
         } else {
-          formulario.reset();
+          form.reset();
           window.open("mailto:gonzalodecastro1@gmail.com");
         }
       }

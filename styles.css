@@ -93,7 +93,7 @@ body {
   color: rgb(169, 50, 50);
 }
 
-#formulario {
+#form {
   display: flex;
   flex-direction: column;
   justify-self: center;
@@ -101,7 +101,7 @@ body {
   margin: 15px auto 10px auto;
   width: 60%;
   font-weight: bolder;
-  color: rgb(90, 248, 235);
+  color: #000;
 }
 
 input[type="text"],
@@ -142,7 +142,5 @@ textarea {
           display: flex;
           flex-direction: column;
         }
-        
-
-    
+            
 }
