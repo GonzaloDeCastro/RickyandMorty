@@ -1,6 +1,6 @@
 # Rick and Morty
 
-## Description
+## Descripción
 
 Api de The Rick and Morty, encuentra todos los personajes y sus características.
 
