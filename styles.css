@@ -56,7 +56,7 @@ body {
 }
 
 .containerCardId {
-  background-color: #fafafa;
+  background-color: #E8E8E8;
   border: solid 2px;
   border-color: rgb(90, 248, 235);
   border-radius: 15px;
@@ -66,7 +66,7 @@ body {
 }
 
 .containerCard {
-  background-color: #fafafa;
+  background-color: #E8E8E8;
   border: solid 2px;
   border-color: rgb(90, 248, 235);
   border-radius: 15px;
@@ -125,12 +125,24 @@ textarea {
   display: flex;
 }
 
+
 .description {
-  background-color: #fff;
   margin: 10px 0px 10px 0px;
   padding: 15px;
   border-radius: 10px;
   width: 75%;
   background: -webkit-linear-gradient(90deg, yellow 10%, orange 90%);
   background: -moz-linear-gradient(90deg, yellow 10%, orange 90%);
+}
+
+
+@media screen and (max-width: 500px){
+
+ .charForm {
+          display: flex;
+          flex-direction: column;
+        }
+        
+
+    
 }

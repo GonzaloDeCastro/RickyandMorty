@@ -12,12 +12,12 @@ const characterId = (id) => {
         <div class="containerCardId" >
         <div class="charForm">
           <div class="character">
-          <h2 class="title">${character.name}</h2>
+          <h2>${character.name}</h2>
           <img class="poster" src="https://rickandmortyapi.com/api/character/avatar/${character.id}.jpeg">
-          <h4 class="title">Sexo: ${character.gender}</h4>
-          <h4 class="title">Estado: ${character.status}</h4>
-          <h4 class="title">Especie: ${character.species}</h4>
-          <h4 class="title">Localidad: ${character.location.name}</h4>
+          <h4>Sexo: ${character.gender}</h4>
+          <h4>Estado: ${character.status}</h4>
+          <h4>Especie: ${character.species}</h4>
+          <h4>Localidad: ${character.location.name}</h4>
           </div>
           <section>
           <div id="afrus-container-form" data-form="63eb5735-0d30-4503-8f5e-63f7c16b036e">
@@ -91,7 +91,7 @@ const loadCharacters = async () => {
             <img class="poster" src="https://rickandmortyapi.com/api/character/avatar/${
               character.id
             }.jpeg">
-            <h2 class="title">${character.name.substr(0, 17)}</h2>
+            <h2>${character.name.substr(0, 17)}</h2>
             </br>
             <p>Last location</p> 
             <h5> ${character.location.name}</h5>
