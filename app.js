@@ -5,10 +5,10 @@ const characterId = (id) => {
       if (resp.status === 200) {
         const data = await resp.json();
 
-        let prueba = "";
+        let characterSelected = "";
 
         const character = data.results.find((character) => character.id === id);
-        prueba += `
+        characterSelected += `
         <div class="containerCardId" >
         <div class="charForm">
           <div class="character">
@@ -20,7 +20,8 @@ const characterId = (id) => {
           <h4 class="title">Localidad: ${character.location.name}</h4>
           </div>
           <section>
-          <form id="form">
+          <div id="afrus-container-form" data-form="63eb5735-0d30-4503-8f5e-63f7c16b036e">
+          <form id="formulario">
               <label for="nombre">Nombre:</label>
               <input id="nombre" type="text" placeholder="Nombre completo">
               <label for="email">Email:</label>
@@ -30,12 +31,13 @@ const characterId = (id) => {
               </br>
               <input id="submit"  class="buttonCard" type="submit" value="Enviar">
           </form>
+          </div>
+          <script src="https://my.afrus.app/template/index.js"></script>
       </section>
       </div>
           </div>
           `;
-        console.log(character);
-        document.getElementById("container").innerHTML = prueba;
+        document.getElementById("container").innerHTML = characterSelected;
       } else if (resp.status === 401) {
         console.log("Error URL API");
       } else if (resp.status === 404) {
@@ -49,6 +51,31 @@ const characterId = (id) => {
   };
 
   loadOneCharacter();
+
+  let formulario = document.getElementById("formulario");
+  let nombre = document.getElementById("nombre");
+  let email = document.getElementById("email");
+  let comentario = document.getElementById("mensaje");
+
+  formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let validateEmail =
+      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (nombre.value.length < 6) {
+      alert("El campo está vacío o el nombre es demasiado corto");
+    } else {
+      if (!validateEmail.test(email.value)) {
+        alert("email inválido");
+      } else {
+        if (comentario.value.length < 6) {
+          alert("El campo está vacío o el comentario es demasiado breve");
+        } else {
+          formulario.reset();
+          window.open("mailto:gonzalodecastro1@gmail.com");
+        }
+      }
+    }
+  });
 };
 const loadCharacters = async () => {
   try {

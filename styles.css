@@ -93,7 +93,7 @@ body {
   color: rgb(169, 50, 50);
 }
 
-#form {
+#formulario {
   display: flex;
   flex-direction: column;
   justify-self: center;
