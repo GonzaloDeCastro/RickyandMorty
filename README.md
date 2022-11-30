@@ -26,10 +26,10 @@ Escribe en la PowerShell "git clone https://github.com/GonzaloDeCastro/RickyandM
 Busca la ruta en donde descargaste el proyecto, entra y da click en el archivo index.html, se abrirá el navegador y verás la App
 ```
 
-### Work by
+### Desarrollado por
 
 ```
-- De Castro Gonzalo
+Gonzalo De Castro
 ```
 
 Puedes probar tambien el proyecto online desde [aquí](https://gonzalodecastro.github.io/RickyandMorty/)
